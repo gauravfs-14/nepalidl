@@ -8,25 +8,11 @@ import {
   AddSigns,
   InfoSigns,
   RegSigns,
-  SIgnCardProps,
   WarnSigns,
 } from "../../constants/TrafficSignalsData";
+import { renderCardWithImageAndTitle } from "../../components/CardWithImageAndTitle";
 
 export default function SignalsScreen() {
-  const renderItem = ({ item }: { item: SIgnCardProps }) => (
-    <View style={styles.card}>
-      <Image
-        style={styles.image}
-        source={{
-          uri: `${item.image}`,
-        }}
-      />
-      <Text style={{ color: "black", textAlign: "center", width: "80%" }}>
-        {item.title}
-      </Text>
-    </View>
-  );
-
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView>
@@ -54,7 +40,7 @@ export default function SignalsScreen() {
           <FlatList
             data={RegSigns}
             numColumns={2}
-            renderItem={renderItem}
+            renderItem={renderCardWithImageAndTitle}
             keyExtractor={(item) => item.id.toString()}
             scrollEnabled={false}
             columnWrapperStyle={{ justifyContent: "center", gap: 10 }}
@@ -65,7 +51,7 @@ export default function SignalsScreen() {
           <FlatList
             data={WarnSigns}
             numColumns={2}
-            renderItem={renderItem}
+            renderItem={renderCardWithImageAndTitle}
             keyExtractor={(item) => item.id.toString()}
             scrollEnabled={false}
             columnWrapperStyle={{ justifyContent: "center", gap: 10 }}
@@ -76,7 +62,7 @@ export default function SignalsScreen() {
           <FlatList
             data={InfoSigns}
             numColumns={2}
-            renderItem={renderItem}
+            renderItem={renderCardWithImageAndTitle}
             keyExtractor={(item) => item.id.toString()}
             scrollEnabled={false}
             columnWrapperStyle={{ justifyContent: "center", gap: 10 }}
@@ -87,7 +73,7 @@ export default function SignalsScreen() {
           <FlatList
             data={AddSigns}
             numColumns={2}
-            renderItem={renderItem}
+            renderItem={renderCardWithImageAndTitle}
             keyExtractor={(item) => item.id.toString()}
             scrollEnabled={false}
             columnWrapperStyle={{ justifyContent: "center", gap: 10 }}
@@ -131,21 +117,6 @@ const styles = StyleSheet.create({
   },
   content: {
     margin: 10,
-  },
-  card: {
-    width: "45%",
-    alignItems: "center",
-    // margin: 10,
-    padding: 10,
-    borderRadius: 10,
-    backgroundColor: "white",
-  },
-  cardHeading: {
-    color: "white",
-    fontWeight: "bold",
-    textAlign: "center",
-    fontSize: 18,
-    width: "50%",
   },
   image: {
     width: 100,

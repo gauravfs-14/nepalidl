@@ -1,10 +1,7 @@
-export type SIgnCardProps = {
-    image: string;
-    title: string;
-    id: number;
-  };
+import { CardWithImageAndTitleProps } from "../components/CardWithImageAndTitle";
 
-export const RegSigns: SIgnCardProps[] = [
+
+export const RegSigns: CardWithImageAndTitleProps[] = [
     {
       image:
         "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Nepal_road_sign_A1.svg/120px-Nepal_road_sign_A1.svg.png",
@@ -223,7 +220,7 @@ export const RegSigns: SIgnCardProps[] = [
     },
   ];
   
-export  const WarnSigns: SIgnCardProps[] = [
+export  const WarnSigns: CardWithImageAndTitleProps[] = [
     {
       image:
         "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Nepal_road_sign_B3-L.svg/120px-Nepal_road_sign_B3-L.svg.png",
@@ -574,7 +571,7 @@ export  const WarnSigns: SIgnCardProps[] = [
     },
   ];
   
-  export const InfoSigns: SIgnCardProps[] = [
+  export const InfoSigns: CardWithImageAndTitleProps[] = [
     {
       image:
         "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Nepal_road_sign_C1.svg/120px-Nepal_road_sign_C1.svg.png",
@@ -757,7 +754,7 @@ export  const WarnSigns: SIgnCardProps[] = [
     },
   ];
   
- export const AddSigns: SIgnCardProps[] = [
+ export const AddSigns: CardWithImageAndTitleProps[] = [
     {
       image:
         "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Nepal_road_sign_D1.svg/120px-Nepal_road_sign_D1.svg.png",
