@@ -6,7 +6,7 @@ import { ScrollView } from "react-native-gesture-handler";
 import { LinearGradient } from "expo-linear-gradient";
 import { Link } from "expo-router";
 
-export default function TabOneScreen() {
+export default function QuestionsHomeScreen() {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView>

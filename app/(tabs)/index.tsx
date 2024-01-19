@@ -5,7 +5,7 @@ import { ScrollView } from "react-native-gesture-handler";
 import { LinearGradient } from "expo-linear-gradient";
 import { UL, LI } from "@expo/html-elements";
 
-export default function TabOneScreen() {
+export default function HomeScreen() {
   return (
     <>
       <SafeAreaView style={styles.container}>
